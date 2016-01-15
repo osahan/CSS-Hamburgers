@@ -1,0 +1,366 @@
+$burger_font_size: 10px;
+$burger_size: 6em;
+$burger_color: #000;
+$burger_background_color: transparent;
+$burger_transf_duration: 0.3s;
+$burger_stroke_width: $burger_font_size / 3;
+
+.o-hamburger {
+
+  appearance: none;
+  background-color: $burger_background_color;
+  border-radius: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  font-size: $burger_font_size;
+  height: $burger_size;
+  margin: 0;
+  overflow: hidden;
+  padding: 1em;
+  text-indent: -9999px;
+  width: $burger_size;
+  box-sizing: border-box;
+
+  *, *:before, *:after {
+      box-sizing: border-box;
+  }
+
+
+  span {
+    background-color: $burger_color;
+    border-radius: 999px;
+    height: $burger_stroke_width;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    transition: all $burger_transf_duration linear;
+
+    &::before,
+    &::after {
+
+      background-color: inherit;
+      border-radius: 999px;
+      content: "";
+      display: block;
+      height: inherit;
+      position: absolute;
+      width: 100%;
+      transition: all $burger_transf_duration linear;
+    }
+
+    &::before {
+
+      top: - $burger_font_size * 1.5;
+    }
+
+    &::after {
+
+      bottom: - $burger_font_size * 1.5;
+    }
+  }
+
+  &.o-hamburger--r-stacked,
+  &.o-hamburger--l-stacked {
+
+    span {
+      &::before,
+      &::after {
+
+        width: $burger_font_size * 4;
+      }
+    }
+  }
+
+  &.o-hamburger--r-stacked {
+
+    span {
+
+      right: 0;
+
+      &::before,
+      &::after {
+
+        right: 0;
+      }
+    }
+  }
+
+  &.o-hamburger--grid {
+
+    justify-content: center;
+
+    span {
+
+      transform-origin: 50% 50%;
+
+      &::before,
+      &::after {
+
+        transform-origin: 50% 50%;
+      }
+    }
+  }
+
+  &.is-active {
+
+    &.o-hamburger--grid {
+
+      span {
+
+        @include burger-grid-background($burger_color);
+        border-radius: 0;
+        width: 80%;
+
+        &::before,
+        &::after {
+
+          @include burger-grid-background($burger_color);
+          border-radius: 0;
+          width: 100%;
+        }
+      }
+
+    }
+
+    &.o-hamburger--l-stacked {
+
+      span {
+
+          width: 75%;
+
+        &::before {
+          width: 50%;
+        }
+      }
+    }
+
+    &.o-hamburger--r-stacked {
+
+      span {
+
+        overflow: visible;
+        width: 75%;
+        transform: translateX(($burger_font_size * 4) * 0.3);
+
+        &::before,
+        &::after {
+
+          right: 0;
+        }
+
+        &::before {
+          width: 50%;
+        }
+      }
+    }
+
+    &.o-hamburger--l-rotate {
+
+      span {
+
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.o-hamburger--r-rotate {
+
+      span {
+
+        transform: rotate(90deg);
+      }
+    }
+
+    &.o-hamburger--l-cross {
+
+      span {
+
+        background-color: transparent;
+
+        &:after {
+
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate(45deg);
+         }
+      }
+    }
+
+    &.o-hamburger--r-cross {
+
+      span {
+
+        background-color: transparent;
+
+        &:after {
+          bottom: 0;
+          transform: rotate(45deg);
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &.o-hamburger--l-arrow {
+
+      span {
+
+        &:after,
+        &:before {
+
+          left: 0.1em;
+          width: 60%;
+          transform-origin: left;
+        }
+
+        &:after {
+          bottom: 0;
+          transform: rotate(35deg);
+        }
+
+        &:before {
+
+          top: 0;
+          transform: rotate(-35deg);
+        }
+      }
+    }
+
+    &.o-hamburger--r-arrow {
+
+      span {
+
+       &:after,
+        &:before {
+
+          right: 0.1em;
+          width: 60%;
+          transform-origin: right;
+        }
+
+        &:after {
+
+          bottom: 0;
+          transform: rotate(-35deg);
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate(35deg);
+        }
+      }
+    }
+
+    &.o-hamburger--l-rotating-arrow {
+
+      span {
+
+        transform:  translateY(-50%) rotate(180deg);
+
+        &:after,
+        &:before {
+
+          right: 0.1em;
+          width: 60%;
+          transform-origin: right;
+        }
+
+        &:after {
+
+          bottom: 0;
+          transform: rotate(-35deg);
+        }
+
+        &:before {
+
+          top: 0;
+          transform: rotate(35deg);
+        }
+      }
+    }
+
+    &.o-hamburger--r-rotating-arrow {
+
+      span {
+
+        transform:  translateY(-50%) rotate(180deg);
+
+       &:after,
+        &:before {
+
+          left: 0.1em;
+          width: 60%;
+          transform-origin: left;
+        }
+
+        &:after {
+
+          bottom: 0;
+          transform: rotate(35deg);
+        }
+
+        &:before {
+
+          top: 0;
+          transform: rotate(-35deg);
+        }
+      }
+    }
+  }
+}
+
+// Burger Sizes
+.o-hamburger {
+
+  &.o-hamburger--small {
+
+    font-size: 6px;
+  }
+
+  &.o-hamburger--medium {
+
+    font-size: 10px;
+  }
+
+  &.o-hamburger--large {
+
+    font-size: 12px;
+  }
+
+}
+
+
+// Burger Variants
+.o-hamburger {
+
+  &.o-hamburger--inverted {
+
+    $buger_color_inverted: #ddd;
+    @include burger-variant($buger_color_inverted);
+
+    &.is-active {
+
+      &.o-hamburger--grid {
+
+        span,
+        span::before,
+        span::after {
+
+          @include burger-grid-background($buger_color_inverted);
+        }
+      }
+    }
+  }
+}
+
+
+
