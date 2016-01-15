@@ -8,6 +8,11 @@ $o_primary_color: "";
 $o_accent_color: #50c0ce;
 $background_color: $o_base_color;
 
+html {
+
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
 
     background-image: radial-gradient(circle,
