@@ -105,20 +105,24 @@
   .o-hamburger.is-active.o-hamburger--l-cross span {
     background-color: transparent; }
     .o-hamburger.is-active.o-hamburger--l-cross span:after {
+      background-color: #000;
       bottom: 0;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
     .o-hamburger.is-active.o-hamburger--l-cross span:before {
+      background-color: #000;
       top: 0;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
   .o-hamburger.is-active.o-hamburger--r-cross span {
     background-color: transparent; }
     .o-hamburger.is-active.o-hamburger--r-cross span:after {
+      background-color: #000;
       bottom: 0;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg); }
     .o-hamburger.is-active.o-hamburger--r-cross span:before {
+      background-color: #000;
       top: 0;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
@@ -196,6 +200,9 @@
   .o-hamburger.o-hamburger--inverted span::before,
   .o-hamburger.o-hamburger--inverted span::after {
     background-color: #fff; }
+  .o-hamburger.o-hamburger--inverted.is-active span::before,
+  .o-hamburger.o-hamburger--inverted.is-active span::after {
+    background-color: #ddd; }
   .o-hamburger.o-hamburger--inverted.is-active.o-hamburger--grid span,
   .o-hamburger.o-hamburger--inverted.is-active.o-hamburger--grid span::before,
   .o-hamburger.o-hamburger--inverted.is-active.o-hamburger--grid span::after {
