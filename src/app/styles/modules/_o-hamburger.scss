@@ -181,14 +181,17 @@ $burger_stroke_width: $burger_font_size / 3;
 
         &:after {
 
+          background-color: $burger_color;
           bottom: 0;
           transform: rotate(-45deg);
         }
 
         &:before {
+
+          background-color: $burger_color;
           top: 0;
           transform: rotate(45deg);
-         }
+        }
       }
     }
 
@@ -199,11 +202,15 @@ $burger_stroke_width: $burger_font_size / 3;
         background-color: transparent;
 
         &:after {
+
+          background-color: $burger_color;
           bottom: 0;
           transform: rotate(45deg);
         }
 
         &:before {
+
+          background-color: $burger_color;
           top: 0;
           transform: rotate(-45deg);
         }
@@ -338,7 +345,6 @@ $burger_stroke_width: $burger_font_size / 3;
 
 }
 
-
 // Burger Variants
 .o-hamburger {
 
@@ -348,6 +354,12 @@ $burger_stroke_width: $burger_font_size / 3;
     @include burger-variant($buger_color_inverted);
 
     &.is-active {
+
+      span::before,
+      span::after {
+
+        background-color: $buger_color_inverted;
+      }
 
       &.o-hamburger--grid {
 
