@@ -1,0 +1,86 @@
+
+    html {
+  font-family: 'Roboto', sans-serif; }
+
+  body {
+    background-image: radial-gradient(circle, #4d4d4d, #000); }
+
+    .demo-css-hamburgers {
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0 auto;
+      min-width: 380px;
+      width: 80%; }
+
+      .demo-header {
+        color: #dedede;
+        font-size: 48px;
+        line-height: 1;
+        padding: 40px 20px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); }
+        .demo-header .demo-header-logo {
+          font-weight: 900; }
+          .demo-header .demo-header-logo--thin {
+            color: #50c0ce;
+            font-size: 30px;
+            font-weight: 100; }
+            .demo-header .demo-header-logo--thick {
+              font-size: 30px;
+              font-weight: 400; }
+              .demo-header .demo-header-logo--desc {
+                color: #50c0ce;
+                font-size: 21px;
+                font-weight: 100; }
+
+.demo-footer {
+  text-align: center;
+  padding: 2em;
+  font-weight: 100;
+  font-size: 1em;
+  color: #dedede; }
+  .demo-footer a {
+    color: #dedede; }
+
+.git-btn {
+  font-size: 18px;
+  font-weight: 100;
+  color: #dedede;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.1s ease-out, border 0.1s ease-out, background-color 0.15s ease-out,
+    color 0.1s ease-out;
+  margin: 2rem 0; }
+  .git-btn::hover {
+    background: #dedede; }
+
+.demo-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+  .demo-item {
+    align-items: center;
+    display: flex;
+    height: 6em;
+    justify-content: center;
+    padding: 1em;
+    position: relative; }
+    .demo-item .demo-item-action-trigger {
+      flex: 1; }
+      .demo-item .demo-item-active-state {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex: 1; }
+        .demo-item .demo-item-active-state .m-hamburger {
+          pointer-events: none; }
+    .demo-item .demo-item-action-desc {
+      flex: 100%; }
+
+  
