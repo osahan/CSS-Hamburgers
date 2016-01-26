@@ -5,7 +5,7 @@ $burger_background_color: transparent;
 $burger_transf_duration: 0.3s;
 $burger_stroke_width: $burger_font_size / 3;
 
-.o-hamburger {
+.m-hamburger {
 
   appearance: none;
   background-color: $burger_background_color;
@@ -62,8 +62,8 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.o-hamburger--r-stacked,
-  &.o-hamburger--l-stacked {
+  &.mm-hamburger--r-stacked,
+  &.mm-hamburger--l-stacked {
 
     span {
       &::before,
@@ -74,7 +74,7 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.o-hamburger--r-stacked {
+  &.mm-hamburger--r-stacked {
 
     span {
 
@@ -88,7 +88,7 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.o-hamburger--grid {
+  &.mm-hamburger--grid {
 
     justify-content: center;
 
@@ -106,7 +106,7 @@ $burger_stroke_width: $burger_font_size / 3;
 
   &.is-active {
 
-    &.o-hamburger--grid {
+    &.mm-hamburger--grid {
 
       span {
 
@@ -125,7 +125,7 @@ $burger_stroke_width: $burger_font_size / 3;
 
     }
 
-    &.o-hamburger--l-stacked {
+    &.mm-hamburger--l-stacked {
 
       span {
 
@@ -137,7 +137,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--r-stacked {
+    &.mm-hamburger--r-stacked {
 
       span {
 
@@ -157,7 +157,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--l-rotate {
+    &.mm-hamburger--l-rotate {
 
       span {
 
@@ -165,7 +165,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--r-rotate {
+    &.mm-hamburger--r-rotate {
 
       span {
 
@@ -173,7 +173,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--l-cross {
+    &.mm-hamburger--l-cross {
 
       span {
 
@@ -195,7 +195,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--r-cross {
+    &.mm-hamburger--r-cross {
 
       span {
 
@@ -217,7 +217,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--l-arrow {
+    &.mm-hamburger--l-arrow {
 
       span {
 
@@ -242,7 +242,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--r-arrow {
+    &.mm-hamburger--r-arrow {
 
       span {
 
@@ -267,7 +267,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--l-rotating-arrow {
+    &.mm-hamburger--l-rotating-arrow {
 
       span {
 
@@ -295,7 +295,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.o-hamburger--r-rotating-arrow {
+    &.mm-hamburger--r-rotating-arrow {
 
       span {
 
@@ -326,19 +326,19 @@ $burger_stroke_width: $burger_font_size / 3;
 }
 
 // Burger Sizes
-.o-hamburger {
+.m-hamburger {
 
-  &.o-hamburger--small {
+  &.mm-hamburger--small {
 
     font-size: 6px;
   }
 
-  &.o-hamburger--medium {
+  &.mm-hamburger--medium {
 
     font-size: 10px;
   }
 
-  &.o-hamburger--large {
+  &.mm-hamburger--large {
 
     font-size: 12px;
   }
@@ -346,9 +346,9 @@ $burger_stroke_width: $burger_font_size / 3;
 }
 
 // Burger Variants
-.o-hamburger {
+.m-hamburger {
 
-  &.o-hamburger--inverted {
+  &.mm-hamburger--inverted {
 
     $buger_color_inverted: #ddd;
     @include burger-variant($buger_color_inverted);
@@ -361,7 +361,7 @@ $burger_stroke_width: $burger_font_size / 3;
         background-color: $buger_color_inverted;
       }
 
-      &.o-hamburger--grid {
+      &.mm-hamburger--grid {
 
         span,
         span::before,
