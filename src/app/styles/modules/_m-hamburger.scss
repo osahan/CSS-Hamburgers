@@ -1,28 +1,26 @@
-$burger_font_size: 10px;
-$burger_size: 6em;
-$burger_color: #000;
+$burger_font_size: 10px !default;
+$burger_size: 6em !default;
+$burger_color: #000 !default;
+$buger_color_inverted: #ddd !default;
 $burger_background_color: transparent;
-$burger_transf_duration: 0.3s;
-$burger_stroke_width: $burger_font_size / 3;
+$burger_transf_duration: 0.3s !default;
+$burger_stroke_width: calc($burger_font_size / 3);
+$burger-module: "hamburger";
 
-.m-hamburger {
+.m-#{$burger-module} {
 
+  align-items: flex-end;
   appearance: none;
   background-color: $burger_background_color;
   border-radius: none;
   border: none;
   box-shadow: none;
+  box-sizing: border-box;
   cursor: pointer;
   display: flex;
-  align-items: flex-end;
-  font-size: $burger_font_size;
-  height: $burger_size;
   margin: 0;
   overflow: hidden;
-  padding: 1em;
   text-indent: -9999px;
-  width: $burger_size;
-  box-sizing: border-box;
 
   *, *:before, *:after {
       box-sizing: border-box;
@@ -62,8 +60,8 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.mm-hamburger--r-stacked,
-  &.mm-hamburger--l-stacked {
+  &.mm-#{$burger-module}--r-stacked,
+  &.mm-#{$burger-module}--l-stacked {
 
     span {
       &::before,
@@ -74,7 +72,7 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.mm-hamburger--r-stacked {
+  &.mm-#{$burger-module}--r-stacked {
 
     span {
 
@@ -88,7 +86,7 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 
-  &.mm-hamburger--grid {
+  &.mm-#{$burger-module}--grid {
 
     justify-content: center;
 
@@ -106,7 +104,7 @@ $burger_stroke_width: $burger_font_size / 3;
 
   &.is-active {
 
-    &.mm-hamburger--grid {
+    &.mm-#{$burger-module}--grid {
 
       span {
 
@@ -125,7 +123,7 @@ $burger_stroke_width: $burger_font_size / 3;
 
     }
 
-    &.mm-hamburger--l-stacked {
+    &.mm-#{$burger-module}--l-stacked {
 
       span {
 
@@ -137,7 +135,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--r-stacked {
+    &.mm-#{$burger-module}--r-stacked {
 
       span {
 
@@ -157,7 +155,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--l-rotate {
+    &.mm-#{$burger-module}--l-rotate {
 
       span {
 
@@ -165,7 +163,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--r-rotate {
+    &.mm-#{$burger-module}--r-rotate {
 
       span {
 
@@ -173,7 +171,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--l-cross {
+    &.mm-#{$burger-module}--l-cross {
 
       span {
 
@@ -195,7 +193,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--r-cross {
+    &.mm-#{$burger-module}--r-cross {
 
       span {
 
@@ -217,7 +215,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--l-arrow {
+    &.mm-#{$burger-module}--l-arrow {
 
       span {
 
@@ -242,7 +240,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--r-arrow {
+    &.mm-#{$burger-module}--r-arrow {
 
       span {
 
@@ -267,7 +265,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--l-rotating-arrow {
+    &.mm-#{$burger-module}--l-rotating-arrow {
 
       span {
 
@@ -295,7 +293,7 @@ $burger_stroke_width: $burger_font_size / 3;
       }
     }
 
-    &.mm-hamburger--r-rotating-arrow {
+    &.mm-#{$burger-module}--r-rotating-arrow {
 
       span {
 
@@ -326,19 +324,24 @@ $burger_stroke_width: $burger_font_size / 3;
 }
 
 // Burger Sizes
-.m-hamburger {
+.m-#{$burger-module} {
 
-  &.mm-hamburger--small {
+  font-size: $burger_font_size;
+  height: $burger_size;
+  padding: 1em;
+  width: $burger_size;
+
+  &.mm-#{$burger-module}--small {
 
     font-size: 6px;
   }
 
-  &.mm-hamburger--medium {
+  &.mm-#{$burger-module}--medium {
 
     font-size: 10px;
   }
 
-  &.mm-hamburger--large {
+  &.mm-#{$burger-module}--large {
 
     font-size: 12px;
   }
@@ -346,11 +349,10 @@ $burger_stroke_width: $burger_font_size / 3;
 }
 
 // Burger Variants
-.m-hamburger {
+.m-#{$burger-module} {
 
-  &.mm-hamburger--inverted {
+  &.mm-#{$burger-module}--inverted {
 
-    $buger_color_inverted: #ddd;
     @include burger-variant($buger_color_inverted);
 
     &.is-active {
@@ -361,7 +363,7 @@ $burger_stroke_width: $burger_font_size / 3;
         background-color: $buger_color_inverted;
       }
 
-      &.mm-hamburger--grid {
+      &.mm-#{$burger-module}--grid {
 
         span,
         span::before,
@@ -373,6 +375,3 @@ $burger_stroke_width: $burger_font_size / 3;
     }
   }
 }
-
-
-
