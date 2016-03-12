@@ -37,12 +37,12 @@ Simple semantic markup.
 ```
 
 ### 2. Pick your favorite Hamburger
-Start with the base module name `m-hamburger` and use one of the following module modifiers, in addition to these classNames you can also `mm-hamburger--inverted` modifier to invert the color of your Hamburger.
+Start with the base module class name `m-hamburger` and use one of the following module modifiers. In addition to these classNames you can also use `mm-hamburger--inverted` modifier to invert the color of your Hamburger.
 
 `mm-hamburger--l-rotating-arrow`, `mm-hamburger--r-rotating-arrow`. `mm-hamburger--grid`, `mm-hamburger--l-stacked`, `mm-hamburger--r-stacked`, `mm-hamburger--l-rotate`, `mm-hamburger--r-rotate`, `mm-hamburger--l-cross`, `mm-hamburger--r-cross`, `mm-hamburger--l-arrow`, `mm-hamburger--r-arrow`. 
 
 ### 3. Add Javascript
-Even thought the CSS is animating our Hamburger, but you still need some javascript to toggle `is-active` class
+Even though CSS is animating our Hamburger, but you still need some javascript to toggle `is-active` class
 
 ```javascript
 // jQuery
