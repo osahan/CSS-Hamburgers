@@ -13,7 +13,7 @@ CSS only Hamburgers, for Burger or CSS lovers.
 ### Bower
 
 ```shell
-$ bower install css-hamburgers
+$ bower install hamburgers
 ```
 
 ## How to use
