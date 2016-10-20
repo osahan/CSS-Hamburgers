@@ -7,6 +7,9 @@
  *  all your sass files automatically
  */
 .m-hamburger {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -14,29 +17,20 @@
   border-radius: none;
   border: none;
   box-shadow: none;
+  box-sizing: border-box;
   cursor: pointer;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-  -webkit-align-items: flex-end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  font-size: 10px;
-  height: 6em;
   margin: 0;
   overflow: hidden;
-  padding: 1em;
-  text-indent: -9999px;
-  width: 6em;
-  box-sizing: border-box; }
+  text-indent: -9999px; }
   .m-hamburger *, .m-hamburger *:before, .m-hamburger *:after {
     box-sizing: border-box; }
   .m-hamburger span {
     background-color: #000;
     border-radius: 999px;
-    height: 3.33333px;
+    height: calc($burger_font_size / 3);
     width: 100%;
     position: relative;
     overflow: visible;
@@ -64,7 +58,6 @@
       right: 0; }
   .m-hamburger.mm-hamburger--grid {
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
     .m-hamburger.mm-hamburger--grid span {
@@ -185,14 +178,17 @@
       -webkit-transform: rotate(-35deg);
               transform: rotate(-35deg); }
 
-.m-hamburger.mm-hamburger--small {
-  font-size: 6px; }
-
-.m-hamburger.mm-hamburger--medium {
-  font-size: 10px; }
-
-.m-hamburger.mm-hamburger--large {
-  font-size: 12px; }
+.m-hamburger {
+  font-size: 10px;
+  height: 6em;
+  padding: 1em;
+  width: 6em; }
+  .m-hamburger.mm-hamburger--small {
+    font-size: 6px; }
+  .m-hamburger.mm-hamburger--medium {
+    font-size: 10px; }
+  .m-hamburger.mm-hamburger--large {
+    font-size: 12px; }
 
 .m-hamburger.mm-hamburger--inverted {
   font-size: #ddd; }
