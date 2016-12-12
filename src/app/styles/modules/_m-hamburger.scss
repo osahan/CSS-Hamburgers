@@ -4,7 +4,7 @@ $burger_color: #000 !default;
 $buger_color_inverted: #ddd !default;
 $burger_background_color: transparent;
 $burger_transf_duration: 0.3s !default;
-$burger_stroke_width: $burger_font_size / 3;
+$burger_stroke_width: round($burger_font_size / 3);
 $burger-module: "hamburger";
 
 .m-#{$burger-module} {

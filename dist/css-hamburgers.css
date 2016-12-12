@@ -30,7 +30,7 @@
   .m-hamburger span {
     background-color: #000;
     border-radius: 999px;
-    height: calc($burger_font_size / 3);
+    height: 3px;
     width: 100%;
     position: relative;
     overflow: visible;
